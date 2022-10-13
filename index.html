@@ -9,20 +9,43 @@
 </head>
 <body>
     <div style="margin-bottom: 40px; display: flex; justify-content: center;">
-        <h1>Кластеризация пороговым алгоритмом</h1>
+        <h1>Кластеризация пороговым алгоритмом. Классификация</h1>
     </div>
     <div class="text-field">
         <div>
             <input type="file" id="fileX">
         </div>
-        <label class="text-field__label" for="search">Выберите порог кластеризации T (Число)</label>
+        <label class="text-field__label" for="valT">Выберите порог кластеризации T (Число)</label>
         <div class="text-field__group">
           <input class="text-field__input" type="number" id="valT" name="search">
           <button class="text-field__btn" type="button" id="buttonX">Посчитать</button>
         </div>
-      </div>
 
-    <div id="chart_div" style="width: 100%; height: 1000px;"></div>
+        <h3>Классификация новой точки</h3>
+        <label class="text-field__label" for="adPointName">Введите название</label>
+        <div class="text-field__group">
+            <input class="text-field__input" type="text" id="adPointName">
+        </div>
+
+        <label class="text-field__label" for="adPointX">Введите площадь в тыс. км<sup>2</sup></label>
+        <div class="text-field__group">
+            <input class="text-field__input" type="number" id="adPointX">
+        </div>
+
+        <label class="text-field__label" for="adPointY">Введите численность населения в тыс. чел</label>
+        <div class="text-field__group">
+            <input class="text-field__input" type="number" id="adPointY">
+        </div>
+        <button class="text-field__btn" type="button" id="adButton">Классифицировать точку</button> 
+        <label class="text-field__label"><br>Классификация</label>
+        <div id="adOutput">
+            Элемент входит в состав классов: 1 <br>
+            ыва
+        </div>
+      </div>
+    
+
+    <div id="chart_div" style="width: 100%;"></div>
     
 </body>
 <script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
